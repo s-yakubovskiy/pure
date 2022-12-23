@@ -160,6 +160,10 @@ prompt_pure_preprompt_render() {
 		preprompt_parts+=('%F{$prompt_pure_colors[git:stash]}${PURE_GIT_STASH_SYMBOL:-≡}%f')
 	fi
 
+	if [[ -n $PURE_SHOW_KUBECONFIG ]]; then
+		preprompt_parts+=('%F{$prompt_pure_colors[git:stash]}  ${KUBECONFIG/*\//} %f')
+	fi
+
 	# Execution time.
 	[[ -n $prompt_pure_cmd_exec_time ]] && preprompt_parts+=('%F{$prompt_pure_colors[execution_time]}${prompt_pure_cmd_exec_time}%f')
 
