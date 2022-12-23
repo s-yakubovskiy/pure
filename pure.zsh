@@ -835,7 +835,7 @@ prompt_pure_setup() {
 		suspended_jobs       red
 		user                 242
 		user:root            default
-		virtualenv           242
+		virtualenv           cyan
 	)
 	prompt_pure_colors=("${(@kv)prompt_pure_colors_default}")
 
